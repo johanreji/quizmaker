@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quizmake
+	</title>
+</head>
+<body>
+<button value="add" onclick="addQfield()">Add</button>
+<input class="deleteqno" type="text" name="deleteqno" placeholder="Enter Q.no."></input>
+<button value="delete" onclick="deleteQfield()">Delete</button>
+<div class="qsheet">
+
+</div>
+
+
+	<script type="text/javascript">
+	var count=0;
+		function addQfield(){
+
+			 count++;
+			var qfield='<div class="qfield'+count+'"><label class="qno">Q.'+count+'</label><textarea class="question"></textarea><br></div>';
+			
+			document.getElementsByClassName('qsheet')[0].innerHTML+=qfield;
+
+				
+			}
+
+	function deleteQfield(){
+
+		var delqno=document.getElementsByClassName("deleteqno")[0].value;
+		
+		
+		var delfield=document.getElementsByClassName("qfield"+delqno)[0];
+		
+		delfield.parentNode.removeChild(delfield);
+
+		
+
+
+
+
+	}		
+
+		</script>
+</body>
+</html>
