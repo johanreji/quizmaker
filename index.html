@@ -7,7 +7,7 @@
 </head>
 <body>
 <button value="add" onclick="addQfield()">Add</button>
-<input class="deleteqno" type="text" name="deleteqno" placeholder="Enter Q.no."></input>
+
 <button value="delete" onclick="deleteQfield()">Delete</button>
 <div class="qsheet">
 
@@ -28,14 +28,13 @@
 
 	function deleteQfield(){
 
-		var delqno=document.getElementsByClassName("deleteqno")[0].value;
 		
 		
-		var delfield=document.getElementsByClassName("qfield"+delqno)[0];
+		var delfield=document.getElementsByClassName("qfield"+count)[0];
 		
 		delfield.parentNode.removeChild(delfield);
 
-		
+
 
 
 
