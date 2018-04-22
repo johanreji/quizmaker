@@ -9,7 +9,10 @@
 <button value="add" onclick="addQfield()">Add</button>
 
 <button value="delete" onclick="deleteQfield()">Delete</button>
+
+
 <div class="qsheet">
+
 
 </div>
 
@@ -20,8 +23,9 @@
 
 			 count++;
 			var qfield='<div class="qfield'+count+'"><label class="qno">Q.'+count+'</label><textarea class="question"></textarea><br></div>';
-			
-			document.getElementsByClassName('qsheet')[0].innerHTML+=qfield;
+			var ofield='<div class="ofield'+count+'"><label class="label1">Option 1</label><input type="text" class="option1" value="NIL"><label class="label2">Option 2</label><input type="text" class="option2" value="NIL"><br><label class="label3">Option 3</label><input type="text" class="option3" value="NIL"><label class="label4">Option 4</label><input type="text" class="option4" value="NIL"><br><br></div>'
+
+			document.getElementsByClassName('qsheet')[0].innerHTML+=qfield+ofield;
 
 				
 			}
@@ -30,9 +34,11 @@
 
 		
 		
-		var delfield=document.getElementsByClassName("qfield"+count)[0];
+		var delqfield=document.getElementsByClassName("qfield"+count)[0];
+		var delofield=document.getElementsByClassName("ofield"+count)[0];
 		
-		delfield.parentNode.removeChild(delfield);
+		delqfield.parentNode.removeChild(delqfield);
+		delofield.parentNode.removeChild(delofield);
 		count--;
 
 
